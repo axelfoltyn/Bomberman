@@ -28,10 +28,6 @@ class Window {
     newJFrame_.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   }
 
-  public static void main(String[] args) {
-    Window w = new Window();
-  }
-
   private JFrame newJFrame_;
   private int height_;
   private int width_;
