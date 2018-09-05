@@ -15,17 +15,16 @@ newPanel_(JFrame)
 /*
 TODO refaire cette class avec extend Jfram et mettre le main dans une class Main
 */
-class Window {
+class Window extends JFrame {
   Window() {
     Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
     height_ = (int)dimension.getHeight();
     width_  = (int)dimension.getWidth();
-    newJFrame_ = new JFrame();
-    newJFrame_.setTitle("Bomberman");
-    newJFrame_.setResizable(false);
-    newJFrame_.setVisible(true);
-    newJFrame_.setSize(width_ / 2, height_ / 2); //TODO : changer / 2 avec une macro
-    newJFrame_.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    this.setTitle("Bomberman");
+    this.setResizable(false);
+    this.setVisible(true);
+    this.setSize(width_ / 2, height_ / 2); //TODO : changer / 2 avec une macro
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   }
 
   private JFrame newJFrame_;
