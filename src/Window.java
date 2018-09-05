@@ -19,10 +19,12 @@ class Window extends JFrame {
     width_  = (int)dimension.getWidth();
     rebord_ = 20;
     this.setTitle("Bomberman");
-    //this.setResizable(false);
+    this.setResizable(false);
     this.setSize(width_ / 2, height_ / 2); //TODO : changer / 2 avec une macro
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    this.setContentPane(new Menu("apuyez sur une touche", rebord_));
+    int nb_ligne = 6;
+    this.setContentPane(new Menu("apuyez sur une touche",
+                                 rebord_, new GridLayout(nb_ligne, 1)));
     this.setVisible(true);
   }
 

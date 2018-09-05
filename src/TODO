@@ -1,5 +1,7 @@
 le TODO de src :
 
 Windows.java :
-- refaire cette class avec extend Jfram et mettre le main dans une class Main
 - changer /2 avec macro ou variable intern
+
+Menu.java :
+- rendre plus clean le code
