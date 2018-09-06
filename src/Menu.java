@@ -2,6 +2,7 @@ import java.awt.*;
 import java.lang.Integer;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
 /*
 la classe Menu donnera des bouton d'action
@@ -23,9 +24,9 @@ class Menu extends JPanel {
   }
 
   Menu(String message, int rebord) {
-    /*ligne = 6;
-      gap = 20;*/
-    this(message, rebord, new GridLayout(6, 1, 20 * 5, 20));
+    /*int ligne = 6;
+      int gap = 20;*/
+    this(message, rebord, (new GridLayout(6, 1, 20 * 5, 20)));
   }
 
   Menu(String message, int rebord, LayoutManager layout) {
@@ -36,9 +37,15 @@ class Menu extends JPanel {
   }
 
 
+
+
   public void paintComponent(Graphics g){
     int pixel = 7; // la largeur en pixel d'une lettre
     g.drawString(message_, (this.getWidth() - message_.length() * pixel) / 2, this.getHeight() - rebord_);
+    Dimension dimension = this.getSize();
+    int longeur = (int)dimension.getWidth();
+    //EmptyBorder(int top, int left, int bottom, int right)
+    this.setBorder(new EmptyBorder(rebord_, longeur / 3, rebord_, longeur / 3));
   }
 
   public void lancer_menu() {

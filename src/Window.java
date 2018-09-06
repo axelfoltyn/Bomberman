@@ -11,7 +11,9 @@ height_ (int) la hauteur utile de l'écran
 width_ (int) la largeur utile de l'écran
 rebord_ (int) l'écart minimal entre le rebord de la fenêtre et les composants
 */
-
+/*
+mettre en fr les variable
+*/
 class Window extends JFrame {
 
   /*
@@ -37,7 +39,7 @@ class Window extends JFrame {
     //creation du menu de depart:
     int nb_ligne = 6;
     this.setContentPane(new Menu("apuyez sur une touche",
-                                 rebord_, new GridLayout(nb_ligne, 1)));
+                                 rebord_, new GridLayout(nb_ligne, 1, 20 * 5, 20)));
 
     //permet de mettre cette fenêtre visible.
     this.setVisible(true);
