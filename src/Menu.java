@@ -17,25 +17,20 @@ class Menu extends JPanel {
   Menu() {
     message_ = "";
     rebord_ = 0;
-    ligne_ = 6;
-    gap_ = 20;
-    this.setLayout(new GridLayout(ligne_, 1, gap_ * 5, gap_));
+    int ligne = 6;
+    int gap = 20;
+    this.setLayout(new GridLayout(ligne, 1, gap * 5, gap));
   }
 
   Menu(String message, int rebord) {
-    message_ = message;
-    rebord_ = rebord;
-    ligne_ = 6;
-    gap_ = 20;
-    this.setLayout(new GridLayout(ligne_, 1, gap_ * 5, gap_));
-    lancer_menu();
+    /*ligne = 6;
+      gap = 20;*/
+    this(message, rebord, new GridLayout(6, 1, 20 * 5, 20));
   }
 
   Menu(String message, int rebord, LayoutManager layout) {
     message_ = message;
     rebord_ = rebord;
-    ligne_ = 6;
-    gap_ = 20;
     this.setLayout(layout);
     lancer_menu();
   }
@@ -47,13 +42,11 @@ class Menu extends JPanel {
   }
 
   public void lancer_menu() {
-    for(int i = 0; i < ligne_; i++) {
+    for(int i = 0; i < 6; i++) {
       this.add(new JButton(Integer.toString(i)));
     }
   }
 
-  private int gap_;
   private String message_;
   private int rebord_;
-  private int ligne_;
 }
