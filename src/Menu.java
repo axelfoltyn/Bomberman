@@ -63,9 +63,13 @@ class Menu extends JPanel implements KeyListener {
 
 
   public void paintComponent(Graphics g){
+
     int pixel = 7; // la largeur en pixel d'une lettre
     if(premier_) {
       g.drawString(message_, (this.getWidth() - message_.length() * pixel) / 2, this.getHeight() - rebord_);
+    }
+    else {
+      super.paintComponent(g);
     }
     Dimension dimension = this.getSize();
     int longeur = (int)dimension.getWidth();
