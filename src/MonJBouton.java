@@ -1,4 +1,7 @@
-class MonJBouton extends JBouton {
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+abstract class MonJBouton extends JButton {
 
 
   MonJBouton(String nom) {
@@ -6,5 +9,6 @@ class MonJBouton extends JBouton {
   }
 
 
-  public void action();
+  public abstract void action();
+  public abstract void action(JPanel jpanel);
 }
