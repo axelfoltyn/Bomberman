@@ -14,8 +14,10 @@ rappel l'origin est en haut a droite et axe des y est inversé
 /*
 TODO : rendre plus clean le code
 */
-class Menu extends JPanel implements KeyListener {
+class Menu extends JPanel implements KeyListener, ActionListener {
 
+
+  // Les constructeurs :
   Menu() {
     this("apuyez sur une touche", 0);
   }
@@ -41,6 +43,7 @@ class Menu extends JPanel implements KeyListener {
 
     for(int i = 0; i < nb_bouton_; i++) {
       liste_des_mod_[i] =new JButton(Integer.toString(i));
+      liste_des_mod_[i].addActionListener(this);
       this.add(liste_des_mod_[i]);
       liste_des_mod_[i].setVisible(false);
     }
@@ -49,6 +52,10 @@ class Menu extends JPanel implements KeyListener {
     this.setFocusable(true);
     this.setLayout(layout_);
   }
+
+
+  //la lecture des touche pour afficher après le menu
+
 
   public void keyPressed(KeyEvent key) {}
 
@@ -77,12 +84,31 @@ class Menu extends JPanel implements KeyListener {
     this.setBorder(new EmptyBorder(rebord_, longeur / 3, rebord_, longeur / 3));
   }
 
+
+  // lecture bouton
+
+  public void actionPerformed(ActionEvent e) {
+    Object bouton = e.getSource();
+    for(int i = 0; i < nb_bouton_; i++) {
+      if (bouton == liste_des_mod_[i]) {
+        System.out.println("bouton num" + i);
+        //liste_action[i].action();
+      }
+    }
+  }
+
+
+  //les methodes de la classe
   public void lancer_menu() {
-    for(int i = 0; i < 6; i++) {
+    for(int i = 0; i < nb_bouton_; i++) {
       liste_des_mod_[i].setVisible(true);
     }
   }
 
+
+  //les variable local
+
+  //private Action_JBouton list_des_action;
   private int nb_bouton_;
   private JButton[] liste_des_mod_;
   private LayoutManager layout_;

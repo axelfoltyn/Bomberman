@@ -37,9 +37,9 @@ class Window extends JFrame {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     //creation du menu de depart:
-    int nb_ligne = 6;
-    this.setContentPane(new Menu("apuyez sur une touche",
-                                 rebord_, new GridLayout(nb_ligne, 1, 20 * 5, 20)));
+    int nb_ligne = 7;
+    this.setContentPane(new Menu("apuyez sur une touche", rebord_,
+                                 new GridLayout(nb_ligne, 1, 20 * 5, 20), nb_ligne));
 
     //permet de mettre cette fenêtre visible.
     this.setVisible(true);
