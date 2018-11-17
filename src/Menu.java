@@ -92,6 +92,8 @@ class Menu extends JPanel implements KeyListener, ActionListener {
     for(int i = 0; i < nb_bouton_; i++) {
       if (bouton == liste_des_mod_[i]) {
         System.out.println("bouton num" + i);
+        this.setBorder(new EmptyBorder(rebord_, rebord_, rebord_, rebord_)); //retire les rebord
+        cacher_menu();
         //liste_action[i].action();
       }
     }
@@ -99,6 +101,13 @@ class Menu extends JPanel implements KeyListener, ActionListener {
 
 
   //les methodes de la classe
+
+  public void cacher_menu() {
+    for(int i = 0; i < nb_bouton_; i++) {
+      liste_des_mod_[i].setVisible(false);
+    }
+  }
+
   public void lancer_menu() {
     for(int i = 0; i < nb_bouton_; i++) {
       liste_des_mod_[i].setVisible(true);
@@ -109,6 +118,7 @@ class Menu extends JPanel implements KeyListener, ActionListener {
   //les variable local
 
   //private Action_JBouton list_des_action;
+  private JPanel[] liste_des_affichage_;
   private int nb_bouton_;
   private JButton[] liste_des_mod_;
   private LayoutManager layout_;
