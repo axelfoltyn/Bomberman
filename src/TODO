@@ -5,3 +5,9 @@ Windows.java :
 
 Menu.java :
 - rendre plus clean le code
+
+mettre la map de Game dans une class abstraite pour etre lisible de tous
+
+ajout des image
+
+personnage(key listener...) et les classes Cases a faire

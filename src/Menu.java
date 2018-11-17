@@ -85,7 +85,7 @@ class Menu extends JPanel implements KeyListener, ActionListener {
   }
 
 
-  // lecture bouton
+  // lecture bouton + modification  des actions TODO
 
   public void actionPerformed(ActionEvent e) {
     Object bouton = e.getSource();
