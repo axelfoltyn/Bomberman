@@ -10,4 +10,4 @@ mettre la map de Game dans une class abstraite pour etre lisible de tous
 
 ajout des image
 
-personnage(key listener...) et les classes Cases a faire
+personnage ne dois ne pas etre considérer comme une case (key listener...) et les classes Cases a faire

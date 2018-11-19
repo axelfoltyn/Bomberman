@@ -5,6 +5,7 @@ public class Case{
   private Personnage p;
   private Bombe b;
   private Flame f;
+
   public Case(){
     type = 0;
   }

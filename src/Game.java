@@ -9,19 +9,18 @@ import javax.swing.JPanel;
 5 : Flame
 */
 
-class Game extends JPanel {
+public abstract class Game extends JPanel {
 
 
 
   //private Image[] bdd_image;
-  private Case[][] map_;
+  public static abstract Case[][] map_ = new Case[x_][y_];;
   private int x_;
   private int y_;
 
-  Game() {
+  pulic Game() {
     x_ = 15;
     y_ = 15;
-    map_ = new Case[x_][y_];
     init_map();
   }
 
