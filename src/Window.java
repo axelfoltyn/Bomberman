@@ -15,16 +15,14 @@ rebord_ (int) l'écart minimal entre le rebord de la fenêtre et les composants
 mettre en fr les variable
 */
 class Window extends JFrame {
-
   /*
     Le constructeur Window recupère les dimention de l'écran pour ouvrir une
     fenêtre qui fera toujours 1/4 de l'écran utilisable (grace au divisé par 2).
 
     il ouvrira le menu de depart.
    */
-  Window() {
+  Window(String title) {
     //les paramettres:
-    String title = "Bomberman";
     Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
     height_ = (int)dimension.getHeight();
     width_  = (int)dimension.getWidth();
@@ -33,7 +31,7 @@ class Window extends JFrame {
     //linitialisation de la fenêtre:
     this.setTitle(title);
     this.setResizable(false);
-    this.setSize(width_ / 2, height_ / 2); //TODO : changer / 2 avec une macro ou ce qui s'en rapproche
+    this.setSize(width_ / resize_, height_ / resize_);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     //creation du menu de depart:
@@ -48,4 +46,6 @@ class Window extends JFrame {
   private int height_;
   private int width_;
   private int rebord_;
+  //la fenetre sera de la 1/n de la hauteur et de la largeur
+  private static final int resize_ = 2;
 }
