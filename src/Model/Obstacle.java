@@ -1,9 +1,8 @@
 package Model;
 
-public class Obstacle {
-  private Obstacle(){}
+public abstract class Obstacle {
 
-  protected double x, y;
+  protected int x, y;
   protected boolean destructible;
 
   public boolean is_destroy() {return destructible;}
