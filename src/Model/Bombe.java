@@ -1,47 +1,61 @@
-public class Bombe extends Case {
-  private int deg, x, y, compteur, int portee;
+package Model;
+
+
+public class Bombe {
+  private int deg, portee;
+  private double x, y, compteur;
   private boolean explo;
+  private int tmp_explo;
   //private static Arraylist<Bombe> listebombe = new Arraylist<Bombe>;
 
-  public Bombe(int deg, int x, int y){
+  public Bombe(int deg, int x, int y, int portee){
     this.deg=deg;
     this.x=x;
     this.y=y;
-    compteur = 3;
+    compteur = 3.0;
     explo = false;
-    portee = 1;
-    listebombe.add(this);
+    this.portee = portee;
+    tmp_explo = 1;
   }
 
-  public void update(){
-    compteur--;
+  public void update(double dt){
+    compteur -= dt;
     if(compteur <= 0){
       boom();
     }
+  }
 
+  public void  boom(){
+    explo = true;
+  }
 
-    public void  boom(){
-      explo = true;
-      this.type = 5; // devient case FLAME
-      this.f = new Flame(/*liste d'image, */deg, x, y);
-      int i;
-      // for(i=0;i<listebombe.size();i++){
-      //   if(listebombe.get(i).x<x+portee && listebombe.get(i).x>x-portee &&
-      //      listebombe.get(i).y<y+portee && listebombe.get(i).y<y+portee){
-      //     listebombe.get(i).boom();
-      //   }
-      // }
-
-      //droite
-      for(i = 1; i < portee; i++) {
-        switch (Game.map_[x][y + i].type) {
-        case(0) : //vide
-          Game.map_[x][y + i].type = 5;
-          Game.map_[x][y + i].f = new Flame(/*liste d'image, */deg, x, y);
-          break;
-        case(1) : //caisse
-          //...x
+  public boolean is_touch(double x, double y, Obstacle obs[]) {
+    if (compteur < -1 * tmp_explo) {return false;}
+    double err = 0.5;
+    if ((this.x + err < x || this.x - err > x) && (this.y + err < y || this.y - err > y)) {return false;}
+    if (this.x + err >= x || this.x - err <= x){
+      if (Math.abs(this.y - y) < portee) {return false;}
+      for (Obstacle o: obs){
+        if ((o.y <= this.y && y <= o.y)
+            || (o.y >= this.y && y >= o.y)) {
+              return false;
+        }
       }
     }
+    else {
+      if (Math.abs(this.x - x) < portee) {return false;}
+      for (Obstacle o: obs){
+        if ((o.x <= this.x && x <= o.x)
+            || (o.x >= this.x && x >= o.x)) {
+              return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  public boolean a_detruire() {
+    return compteur < -1 * tmp_explo;
+  }
 
 }
