@@ -30,6 +30,7 @@ public class Bombe {
     public void gone(){
         exist = false;
     }
+    
 
     public boolean get_bonus(double x, double y){
         if (this.x == x && this.y == y){
