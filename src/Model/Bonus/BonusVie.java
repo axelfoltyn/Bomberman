@@ -1,9 +1,9 @@
 
-//import a faire
+package Model.Bonus;
 
 Public class BonusVie extends Bonus{
-    public void get_bonus(double x, double y, Personage p){
-        if(p.check_is_here(x, y)){
+    public void get_bonus(Personage p){
+        if(p.check_is_here(this.x, this.y)){
             p.gain_pv(5);
         }
     }
