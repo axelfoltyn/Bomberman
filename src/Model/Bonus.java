@@ -29,7 +29,6 @@ public class Bonus {
     }
 
 
-
     public boolean get_bonus(double x, double y){
         if (this.x == x && this.y == y){
             return this.bonus;
