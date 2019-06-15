@@ -18,7 +18,7 @@ public abstract class Game extends JPanel {
   private int x_;
   private int y_;
 
-  pulic Game() {
+  public Game() {
     x_ = 15;
     y_ = 15;
     init_map();
