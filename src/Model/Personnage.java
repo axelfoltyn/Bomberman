@@ -15,6 +15,7 @@ public abstract class Personnage {
     this.resistance = 0;
     this.porte = 1;
     this.cooldown = 4;
+    this.vitesse = 1.0;
   }
 
   public void move(int x_futur, int y_futur){
@@ -73,7 +74,11 @@ public abstract class Personnage {
     this.cooldown = gain;
   }
 
-  void gain_porte(int gain){
+  void gain_vitesse(int gain){
+    this.vitesse += gain;
+  }
+
+  void gain_porte(double gain){
     this.porte += gain;
   }
 
