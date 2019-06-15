@@ -60,10 +60,16 @@ public abstract class Personnage {
   }
 
   void gain_resistance(int gain){
+    if((this.resistance + gain) > 10){
+      this.resistance = 10;
+    }
     this.resistance = gain;
   }
 
   void gain_cooldown(int gain){
+    if((this.cooldown + gain) > 4){
+      this.cooldown = 4;
+    }
     this.cooldown = gain;
   }
 

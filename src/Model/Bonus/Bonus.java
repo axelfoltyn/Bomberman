@@ -28,6 +28,6 @@ public abstract class Bonus {
     }
 
 
-    public abstract void get_bonus(double x, double y, Personnage p);
+    public abstract void get_bonus(Personnage p);
 
 }
