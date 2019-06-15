@@ -1,14 +1,14 @@
 package Model;
 
 
-public class Bonus {
+public abstract class Bonus {
     private int boost;
     private double x, y, compteur;
     private boolean exist;
     private String bonus;
     //private static Arraylist<Bonus> listebonus = new Arraylist<Bonus>;
 
-    public Bonus(int deg, int x, int y, int portee, String bonus){
+    public Bonus(int deg, int x, int y, String bonus){
         this.boost = boost;
         this.x = x;
         this.y = y;
@@ -29,11 +29,6 @@ public class Bonus {
     }
 
 
-    public boolean get_bonus(double x, double y){
-        if (this.x == x && this.y == y){
-            return this.bonus;
-        }
-        return false; // Si false on applique rien au joueur sinon on lui applique le bonus
-    }
+    public abstract void get_bonus(double x, double y, Personnage p);
 
 }
