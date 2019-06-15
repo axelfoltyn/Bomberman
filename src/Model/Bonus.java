@@ -1,7 +1,7 @@
 package Model;
 
 
-public class Bombe {
+public class Bonus {
     private int boost, portee;
     private double x, y, compteur;
     private boolean disp;
@@ -30,7 +30,7 @@ public class Bombe {
     public void gone(){
         exist = false;
     }
-    
+
 
     public boolean get_bonus(double x, double y){
         if (this.x == x && this.y == y){
