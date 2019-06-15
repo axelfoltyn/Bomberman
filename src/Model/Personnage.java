@@ -82,6 +82,8 @@ public abstract class Personnage {
     this.porte += gain;
   }
 
+
+
   //modifier les stats en fonction du personnage
   void choix_personnage(String nom){
     //TODO a coder
