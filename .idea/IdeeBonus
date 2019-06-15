@@ -1,3 +1,5 @@
 A la place de faire disparaitre le bonus on peut le transforme en autre chose.
 
 Classe abstraite pour faire des sous classe des differents bonus.
+
+Si on prend un malus de degats et qu'on a 0 de degats on passe a 2 degats.

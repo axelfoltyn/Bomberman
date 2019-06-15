@@ -1,5 +1,6 @@
+
 public abstract class Personnage {
-  private int x, y, pv, protection, degats, resistance, porte, cooldown;
+  private int x, y, pv, bouclier, degats, resistance, porte, cooldown;
   private String nom;
   private double vitesse;
 
@@ -25,20 +26,36 @@ public abstract class Personnage {
     }
   }
 
+  public boolean check_is_here(double x, double y){
+    double err = 0.5; //prendre aussi la moitié des casses a coté si pas assez punitif
+    return (this.x - err <= x || this.x + err >= x) && (this.y - err <= y || this.y + err >= x)
+  }
+
+
   public void poser_bombe(){
 
   }
 
-  //Faire attention a mettre en négatif si perte de point
+
+  //Faire attention a mettre en négatif si perte de point et voir si on cap en négatif certain
   void gain_pv(int gain){
+    if((this.pv + gain) > 50){
+      this.pv = 50;
+    }
     this.pv += gain;
   }
 
   void gain_bouclier(int gain){
+    if((this.bouclier + gain) > 25){
+      this.bouclier = 25;
+    }
     this.bouclier += gain;
   }
 
   void gain_degats(int gain){
+    if((this.degats + gain) > 15){
+      this.degats = 15;
+    }
     this.degats = gain;
   }
 

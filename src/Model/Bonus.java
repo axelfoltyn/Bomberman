@@ -1,15 +1,14 @@
 package Model;
 
+import Model.Personnage;
 
 public abstract class Bonus {
-    private int boost;
     private double x, y, compteur;
     private boolean exist;
     private String bonus;
     //private static Arraylist<Bonus> listebonus = new Arraylist<Bonus>;
 
-    public Bonus(int deg, int x, int y, String bonus){
-        this.boost = boost;
+    public Bonus(int deg, int x, int y){
         this.x = x;
         this.y = y;
         compteur = 10.0;
