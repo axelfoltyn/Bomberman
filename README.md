@@ -73,27 +73,20 @@ Controle : rajoute une bombe invoquable Cooldown entre les bombes (Min : 1 - Max
    
 Bouclier : Les points de bouclier du personnage (Min : 0 - Max : 25) - S : bouclier   
    
-- Bonus communs :   
+## Bonus communs :  
    
-###Fond orange :   
+### Fond orange :   
     
 Gains de statistique : +1 dans une des stats   
 Gains de point de vie : +10 points de vie   
 Bouclier : + 5 points de bouclier    
    
-###Fond vert :   
+### Fond vert :   
    
 Perçage : les bombes casse plus loin que la premiere brique (à hauteur de leur portée) - S : foreuse   
 Botte : pousse la bombe jusqu'au prochain mur - S : botte   
 Gant : permet de porter et jeter une bombe - S : gant  
 Soins : régénère 5 points de vie - S : coeur  
-
-
-
-
-
-
-
 
 
 
