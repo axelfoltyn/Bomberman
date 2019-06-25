@@ -10,4 +10,7 @@ public class Caisse extends Obstacle {
     }
 
     // a coder
+    public destroy(){
+        this.destructible = true;
+    }
 }

@@ -8,7 +8,7 @@ F pour Féminin et M pour Masculin
 A pour Actif et P pour Passif  
 S pour Symbole/Initiales  
   
-###M ode de jeu :  
+### Mode de jeu :  
 Vie : 5/3/1  
 Temps : 20/10/5 mins  
 Avec/Sans : Bonus, Passifs, Actifs, Blocs (Destructible et/ou Indestructible)  

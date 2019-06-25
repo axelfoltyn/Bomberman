@@ -13,7 +13,7 @@ public abstract class Personnage {
     this.bouclier = 0;
     this.degats = 5;
     this.resistance = 0;
-    this.porte = 1;
+    this.range = 1;
     this.cooldown = 4;
     this.vitesse = 1.0;
   }
@@ -78,8 +78,8 @@ public abstract class Personnage {
     this.vitesse += gain;
   }
 
-  void gain_porte(double gain){
-    this.porte += gain;
+  void gain_range(double gain){
+    this.range += gain;
   }
 
 
