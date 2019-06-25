@@ -1,14 +1,14 @@
-##Axel Foltyn  
-##Barthelemy Robin
+## Axel Foltyn  
+## Barthelemy Robin
 
-#Regles mal ecris a revoir
-
-###Scripts des Personnages Bomberman   
+# Regles mal ecris a revoir
+ 
+### Scripts des Personnages Bomberman   
 F pour Féminin et M pour Masculin  
 A pour Actif et P pour Passif  
 S pour Symbole/Initiales  
   
-###Mode de jeu :  
+###M ode de jeu :  
 Vie : 5/3/1  
 Temps : 20/10/5 mins  
 Avec/Sans : Bonus, Passifs, Actifs, Blocs (Destructible et/ou Indestructible)  
@@ -25,7 +25,7 @@ Les bombes sont des obstacles
   
   
   
-##Gentils :   
+## Gentils :   
 
 Speedy - M - A : Peut augmenter sa vitesse sur une courte durée - S :Sy  
    
@@ -40,7 +40,7 @@ Rose - F - A : Possède une régénération de vie - S : R
 Phantom - F - A : Devient invisible - S : I  
 couleur : blanc/pale  
    
-##Vilains :  
+## Vilains :  
    
 Costo - M - A : Augmente les dégats de ses bombes - S : Co   
    
@@ -61,9 +61,9 @@ couleur : inverse de phantom (donc noir)
 
 
 
-##Statistiques et bonus :   
+## Statistiques et bonus :   
    
-###Statistique :    
+### Statistique :    
 Vie : Les points de vie du personnage (Min : 10 - Max : 50) - S :coeur   
 Dégats : Les dégats des bombes (Min : 0 - Max : 15) - S : explosion   
 Vitesse : La rapidité du joueur (Min :  - Max : ) - S : eclair   
