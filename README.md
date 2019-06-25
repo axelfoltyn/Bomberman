@@ -1,13 +1,14 @@
-Axel Foltyn  
-Barthelemy Robin
+##Axel Foltyn  
+##Barthelemy Robin
 
+#Regles mal ecris a revoir
 
-Scripts des Personnages Bomberman   
+###Scripts des Personnages Bomberman   
 F pour Féminin et M pour Masculin  
 A pour Actif et P pour Passif  
 S pour Symbole/Initiales  
   
-Mode de jeu :  
+###Mode de jeu :  
 Vie : 5/3/1  
 Temps : 20/10/5 mins  
 Avec/Sans : Bonus, Passifs, Actifs, Blocs (Destructible et/ou Indestructible)  
@@ -24,7 +25,7 @@ Les bombes sont des obstacles
   
   
   
-Gentils :   
+##Gentils :   
 
 Speedy - M - A : Peut augmenter sa vitesse sur une courte durée - S :Sy  
    
@@ -39,7 +40,7 @@ Rose - F - A : Possède une régénération de vie - S : R
 Phantom - F - A : Devient invisible - S : I  
 couleur : blanc/pale  
    
-Vilains :  
+##Vilains :  
    
 Costo - M - A : Augmente les dégats de ses bombes - S : Co   
    
@@ -60,9 +61,9 @@ couleur : inverse de phantom (donc noir)
 
 
 
-Statistiques et bonus :   
+##Statistiques et bonus :   
    
-- Statistique :    
+###Statistique :    
 Vie : Les points de vie du personnage (Min : 10 - Max : 50) - S :coeur   
 Dégats : Les dégats des bombes (Min : 0 - Max : 15) - S : explosion   
 Vitesse : La rapidité du joueur (Min :  - Max : ) - S : eclair   
@@ -74,13 +75,13 @@ Bouclier : Les points de bouclier du personnage (Min : 0 - Max : 25) - S : boucl
    
 - Bonus communs :   
    
-fond orange :   
+###Fond orange :   
     
 Gains de statistique : +1 dans une des stats   
 Gains de point de vie : +10 points de vie   
 Bouclier : + 5 points de bouclier    
    
-fond vert :   
+###Fond vert :   
    
 Perçage : les bombes casse plus loin que la premiere brique (à hauteur de leur portée) - S : foreuse   
 Botte : pousse la bombe jusqu'au prochain mur - S : botte   
